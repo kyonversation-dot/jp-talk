@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>11月19日のふりかえり</title>
+<style>
+  :root{color-scheme:light;--ink:#2b2b2b;--soft:#666;--accent:#d9622b;--tint:#fff4ec;--line:#f0e2d8;}
+  *{box-sizing:border-box}
+  body{margin:0;background:#fffdfa;color:var(--ink);font-family:"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif;line-height:1.8;}
+  main{max-width:720px;margin:0 auto;padding:40px 20px 64px;}
+  .nav{font-size:.9rem;color:var(--soft);margin:0 0 24px;}
+  .nav a{color:var(--accent);}
+  .nav strong{color:var(--ink);}
+  h1{font-size:1.7rem;margin:0 0 4px;}
+  .lead{color:var(--soft);margin:0 0 32px;}
+  h2{font-size:1.15rem;color:var(--accent);margin:36px 0 10px;}
+  ul,ol{margin:0;padding-left:1.3em;}
+  li{margin:6px 0;}
+  table{width:100%;border-collapse:collapse;}
+  th,td{text-align:left;vertical-align:top;padding:10px 8px;border-bottom:1px solid var(--line);}
+  th{white-space:nowrap;font-weight:700;padding-left:0;width:9em;}
+  .todo{background:var(--tint);border-radius:12px;padding:16px 20px;}
+  .todo p{margin:8px 0 0;color:var(--soft);font-size:.92rem;}
+  .ask{background:var(--tint);border-radius:10px;padding:10px 14px;margin:8px 0;}
+  .ask span{display:block;color:var(--soft);font-size:.9rem;}
+</style>
+</head>
+<body>
+<main>
+  <p class="nav">ふりかえり：<a href="ai-review-2026-10-30.html">10月30日（聞き取り）</a>　｜　<a href="ai-review-2026-11-05.html">11月5日（1回目）</a>　｜　<a href="ai-review-2026-11-10.html">11月10日（2回目）</a>　｜　<strong>11月19日（3回目）</strong></p>
+
+  <h1>11月19日のふりかえり</h1>
+  <p class="lead">3回目でしたことと、これからできることのまとめです。ちがうところがあれば教えてください。</p>
+
+  <h2>今日したこと</h2>
+  <ul>
+    <li>Classroomから、聞き取りを作るスキル（listening-maker）をダウンロードして、Claudeに入れました</li>
+    <li>生徒さんのこと（どの課まで習ったか・今回の文法・場面）をClaudeに教えて、「道を聞く」の聞き取りを3問作りました</li>
+    <li>台本を読んで「GO」と送ると、Claudeが音声（mp3）と地図を作り、音声と地図が中に入った生徒用のページ（生徒用ページ.html）にまとめました</li>
+    <li>無料の読み上げ（edge-tts）と、有料の読み上げ（ElevenLabs）の声を聞き比べました</li>
+    <li>ページをリンクで開ける形にするため、GitHubの準備を始めました。アカウントを作るところで今日は終わりました</li>
+  </ul>
+
+  <h2>知っておくと便利なこと</h2>
+  <ul>
+    <li><strong>「Code」の画面で作る：</strong>Claudeのアプリの「Chat」の画面は、インターネットにつながらない場所で動いているので、音声が作れません。「Code」の画面で「このコンピューター」を選ぶと、Claudeが美穂さんのパソコンの上で動いて、音声まで作れます。</li>
+    <li><strong>始める前にフォルダを選ぶ：</strong>新しい会話を始める前に、右の「フォルダを選択」で作業フォルダを選びます。選ばずに始めると、作ったファイルがどこにあるか分かりにくくなります。</li>
+    <li><strong>生徒用のページは1つのファイル：</strong>音声も地図もページの中に入っています。このファイル1つをメールで送れば、生徒さんのパソコンでも音と地図が出ます。</li>
+    <li><strong>生徒さんのことは、ファイルに残る：</strong>今日教えた生徒さんのことは「カリキュラム.md」に保存されました。同じフォルダで作れば、次から毎回説明しなくても使ってくれます。</li>
+  </ul>
+
+  <h2>こういうことができますよ</h2>
+  <div class="todo">
+    <ol>
+      <li><strong>ファイルを1か所に集める：</strong>「Code」の画面で、今日の「Listening maker」の会話を開いて、下の「頼み方の例」の1つ目を送ります。フォルダが開いたら、どこに何があるかが見えます。</li>
+      <li><strong>音声を聞く：</strong>フォルダの中の「生徒用ページ.html」をダブルクリックすると、ブラウザで開きます。再生バーで3問とも聞いてみてください。特に「二つ目」「5分」「30分」「10分」「バス停」の読み方を確かめてください。</li>
+      <li><strong>授業で使う・生徒に渡す：</strong>対面の授業では、先生のパソコンでこのページを開いて流せます。家で聞いてもらう時は、生徒用ページ.htmlの1つだけをメールで送ります。</li>
+      <li><strong>リンクで開く形にする（やりたい時）：</strong>GitHubのアカウントを作ったら、同じ「Listening maker」の会話で「GitHubのアカウントを作りました。続きをお願いします。」と送ります。Claudeが一つずつ案内します。公開のページは、リンクを知っている人なら誰でも見られるので、教科書の文をそのまま使っていないか、置く前に見てください。</li>
+      <li><strong>次の1本を作る：</strong>作業フォルダを選んでから新しい会話を始めて、「/listening-maker」と打ちます。</li>
+    </ol>
+    <p>やってみて止まったところは、そのままにしておいてください。24日に一緒に続きをやりましょう。</p>
+  </div>
+
+  <h2>頼み方の例</h2>
+  <div class="ask">「今日作ったファイルを全部、私の作業フォルダの中に『道を聞く_3問』というフォルダを作って移してください。移したら、そのフォルダを開いてください」<span>フォルダの名前は、分かりやすい名前に変えて大丈夫です。</span></div>
+  <div class="ask">「〇問目の『〇〇』の読み方がちがうので、直してください」<span>読み違いを直す時の頼み方です。生徒に見せる文は変わらず、音声だけ作り直してくれます。</span></div>
+  <div class="ask">「今日作ってみて、私の生徒に合わせて変えたい所があります。〇〇。次から最短で作れるように、listening-makerのスキルを直してください」<span>スキルを自分の形に直す時の頼み方です。</span></div>
+
+  <h2>これから（日本時間）</h2>
+  <table>
+    <tr><th>4回目</th><td>11月24日（火）16:30〜・90分。セカンドブレイン（Claudeが毎回読む、美穂さんの生徒さんと教え方のファイル）の基本の形を一緒に作ります。GitHubで止まっていたら、その続きもします。</td></tr>
+    <tr><th>5回目</th><td>90分。日程は、メッセージで決めましょう。セカンドブレインを使って、ゲームやほかの使い方、またはリスニングのつづきをします。</td></tr>
+  </table>
+</main>
+</body>
+</html>
