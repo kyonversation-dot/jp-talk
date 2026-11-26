@@ -19,6 +19,11 @@
   li { display:flex; gap:12px; padding:6px 0; border-top:1px solid var(--line); }
   li:first-child { border-top:none; }
   .d { flex:0 0 6.2em; color:var(--sub); font-variant-numeric:tabular-nums; }
+  .tabs { display:flex; gap:8px; margin:0 0 20px; }
+  .tabs button { font:inherit; padding:8px 16px; border-radius:999px; border:1px solid var(--line); background:var(--card); color:var(--ink); cursor:pointer; }
+  .tabs button[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:var(--bg); }
+  #byDate h2 { margin-top:0; }
+  .tag { flex:0 0 auto; align-self:center; font-size:.75rem; color:var(--sub); border:1px solid var(--line); border-radius:999px; padding:0 8px; margin-left:auto; white-space:nowrap; }
 </style>
 </head>
 <body>
@@ -27,6 +32,12 @@
   <h1>これまでの話題</h1>
   <p class="lead">2025年11月から2026年11月までのレッスンで話したこと。日付はその回のノートの日付です。</p>
 
+  <div class="tabs" id="tabs" hidden>
+    <button type="button" data-v="date" aria-pressed="true">日付順</button>
+    <button type="button" data-v="theme" aria-pressed="false">テーマ別</button>
+  </div>
+  <div id="byDate" hidden></div>
+  <div id="byTheme">
   <section>
     <h2>日本旅行の計画</h2>
     <ul>
@@ -85,10 +96,10 @@
   <section>
     <h2>ハンガリーの政治と社会</h2>
     <ul>
+      <li><span class="d">2026/07/30</span><span>物価の話</span></li>
       <li><span class="d">2026/05/14</span><span>新しい首相が就任式で宣誓し、16年続いた政権が正式に交代した日（5月9日）の様子</span></li>
       <li><span class="d">2026/04/16</span><span>選挙の結果と裏話、これからの期待</span></li>
       <li><span class="d">2026/03/12</span><span>ハンガリーの運転手</span></li>
-      <li><span class="d">2026/07/30</span><span>物価の話</span></li>
     </ul>
   </section>
 
@@ -156,6 +167,41 @@
       <li><span class="d">2026/07/02</span><span>キヨのハンガリー出国</span></li>
     </ul>
   </section>
+  </div>
 </main>
+<script>
+(function(){
+  var theme=document.getElementById('byTheme'), date=document.getElementById('byDate'), tabs=document.getElementById('tabs');
+  var rows=[];
+  theme.querySelectorAll('section').forEach(function(sec,si){
+    var tag=sec.querySelector('h2').textContent;
+    sec.querySelectorAll('li').forEach(function(li,i){
+      rows.push({d:li.querySelector('.d').textContent, t:li.children[1].textContent, tag:tag, k:si*1000+i});
+    });
+  });
+  rows.sort(function(a,b){ return a.d<b.d?1:a.d>b.d?-1:a.k-b.k; });
+  var sec=null, ul=null, cur='';
+  rows.forEach(function(r){
+    var m=r.d.slice(0,7);
+    if(m!==cur){
+      cur=m; sec=document.createElement('section');
+      var h=document.createElement('h2'); h.textContent=m.slice(0,4)+'年'+Number(m.slice(5))+'月'; sec.appendChild(h);
+      ul=document.createElement('ul'); sec.appendChild(ul); date.appendChild(sec);
+    }
+    var li=document.createElement('li'), a=document.createElement('span'), b=document.createElement('span'), c=document.createElement('span');
+    a.className='d'; a.textContent=r.d; b.textContent=r.t; c.className='tag'; c.textContent=r.tag;
+    li.appendChild(a); li.appendChild(b); li.appendChild(c); ul.appendChild(li);
+  });
+  function show(v){
+    date.hidden=(v!=='date'); theme.hidden=(v!=='theme');
+    tabs.querySelectorAll('button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.v===v); });
+    try{ localStorage.setItem('topicsView',v); }catch(e){}
+  }
+  tabs.hidden=false;
+  tabs.addEventListener('click',function(e){ if(e.target.dataset.v) show(e.target.dataset.v); });
+  var v='date'; try{ v=localStorage.getItem('topicsView')||'date'; }catch(e){}
+  show(v);
+})();
+</script>
 </body>
 </html>
