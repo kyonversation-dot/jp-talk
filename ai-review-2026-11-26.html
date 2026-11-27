@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>11月26日のふりかえり</title>
+<style>
+  :root{color-scheme:light;--ink:#2b2b2b;--soft:#666;--accent:#d9622b;--tint:#fff4ec;--line:#f0e2d8;}
+  *{box-sizing:border-box}
+  body{margin:0;background:#fffdfa;color:var(--ink);font-family:"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif;line-height:1.8;}
+  main{max-width:720px;margin:0 auto;padding:40px 20px 64px;}
+  .nav{font-size:.9rem;color:var(--soft);margin:0 0 24px;}
+  .nav a{color:var(--accent);}
+  .nav strong{color:var(--ink);}
+  h1{font-size:1.7rem;margin:0 0 4px;}
+  .lead{color:var(--soft);margin:0 0 32px;}
+  h2{font-size:1.15rem;color:var(--accent);margin:36px 0 10px;}
+  ul,ol{margin:0;padding-left:1.3em;}
+  li{margin:6px 0;}
+  table{width:100%;border-collapse:collapse;}
+  th,td{text-align:left;vertical-align:top;padding:10px 8px;border-bottom:1px solid var(--line);}
+  th{white-space:nowrap;font-weight:700;padding-left:0;width:9em;}
+  .todo{background:var(--tint);border-radius:12px;padding:16px 20px;}
+  .todo p{margin:8px 0 0;color:var(--soft);font-size:.92rem;}
+  .ask{background:var(--tint);border-radius:10px;padding:10px 14px;margin:8px 0;}
+  .ask span{display:block;color:var(--soft);font-size:.9rem;}
+</style>
+</head>
+<body>
+<main>
+  <p class="nav">ふりかえり：<a href="ai-review-2026-10-30.html">10月30日（聞き取り）</a>　｜　<a href="ai-review-2026-11-05.html">11月5日（1回目）</a>　｜　<a href="ai-review-2026-11-10.html">11月10日（2回目）</a>　｜　<a href="ai-review-2026-11-19.html">11月19日（3回目）</a>　｜　<strong>11月26日（4回目）</strong></p>
+
+  <h1>11月26日のふりかえり</h1>
+  <p class="lead">4回目でしたことと、これからできることのまとめです。ちがうところがあれば教えてください。</p>
+
+  <h2>今日したこと</h2>
+  <ul>
+    <li>「Code」の画面で、「このコンピューター」と「AI作業場所」を選んで始めました</li>
+    <li>別のフォルダにあった生徒さんのメモを、Claudeに頼んでAI作業場所にまとめてもらいました</li>
+    <li>AI作業場所がGitHubにつながっていないことを確かめました（生徒さんのことが外に出ない状態です）</li>
+    <li>これまで作った物と生徒さんのメモを、Claudeに探して一覧にしてもらいました</li>
+    <li>grill-meをスキルとして入れて、「/grill-me」でClaudeに質問してもらいました。途中で「毎回説明しなくても、私と生徒さんのことを知っている状態にしたい」と方向を直しました</li>
+    <li>その答えから、Claudeが毎回読むファイル（CLAUDE.md）、先生のことのファイル、生徒さんごとのファイル（上が「今の状態」・下が「レッスン記録」）を作りました</li>
+    <li>新しい会話で生徒さんのことを聞いて、説明しなくても答えられることを確かめました。そのまま、その生徒さんの課の聞き取りの音声を作りました</li>
+    <li>前回の「道を聞く」の音声とページを見つけて、GitHubで公開してリンクで渡せるように頼みました</li>
+    <li>Anthropicが出しているスキルの一覧を見ました</li>
+  </ul>
+
+  <h2>知っておくと便利なこと</h2>
+  <ul>
+    <li><strong>「Chat」と「Code」は記憶がつながっていない：</strong>Chatの画面やプロジェクトで作った物は、Codeの画面からは見えません。これからはCodeの画面で作業すると、AI作業場所のファイルを毎回読んで、続きから始めてくれます。</li>
+    <li><strong>Claudeの記憶は文字のファイル：</strong>覚えていることは、AI作業場所の中のファイル（.md）に書いてあります。ちがう所があったら、会話で「〇〇はちがって、〇〇です。ファイルも直してください」と言えば直してくれます。ファイルを自分で開いたり動かしたりしなくて大丈夫です。</li>
+    <li><strong>新しい生徒さんの時：</strong>新しい会話で「来週から〇〇さんという生徒さんが始まります。初級で、教科書は〇〇、目的は旅行です」のように話せば、その生徒さんのファイルを作ってくれます。</li>
+    <li><strong>スキルは「/」で呼ぶ：</strong>「/」を打つと、入っているスキルが出てきます。同じ作業が2回うまくいったら、「この形をスキルにしてください」と頼みます。やってみて前より良くなった時は、「スキルを直してください」と頼むと、次から良い形で始められます。</li>
+    <li><strong>分からない時は聞く：</strong>「中学生が分かるように説明してください」と送ると、もっとやさしく説明してくれます。聞けば聞くほど、Claudeも美穂さんに合った説明の仕方を覚えます。</li>
+  </ul>
+
+  <h2>こういうことができますよ</h2>
+  <div class="todo">
+    <ol>
+      <li><strong>レッスンの準備をする：</strong>Codeの画面で新しい会話を開いて、「今から〇〇さんのレッスンの準備をします」と送ります。生徒さんのファイルを読んで、今の状態に合わせて準備を始めてくれます。</li>
+      <li><strong>レッスンのあとにメモを渡す：</strong>レッスンのあとに、気づいたことやメモ（手書きなら写真でも）を「記録 〇〇さん。〜」と送ります。生徒さんのファイルの「レッスン記録」に足してくれます。次のレッスンの前に1回やってみてください。</li>
+      <li><strong>grill-meの続き：</strong>今日は途中でまとめてもらったので、時間のある時に下の「頼み方の例」の1つ目を送ってください。残りの質問をしてくれます。</li>
+      <li><strong>Chatで作った物を引き継ぐ：</strong>Chatのプロジェクトで作ってきたPowerPointなどは、Chatの会話の中で下の「頼み方の例」の2つ目を送ります。まとめたファイルをダウンロードしてAI作業場所に入れたら、Codeの画面で3つ目を送ります。</li>
+      <li><strong>「道を聞く」をリンクで渡す：</strong>GitHubでの公開を頼んだ会話で、止まっていたら「続きをお願いします」と送ります。公開のページは、リンクを知っている人なら誰でも見られるので、生徒さんの名前や教科書の文がそのまま入っていないか、渡す前に見てください。</li>
+      <li><strong>ルーレットのアイデア：</strong>今日お話しした、文型と話題を回して文を作る遊びも、Claudeに話せば作ってもらえます。5回目に一緒にやってみましょう。</li>
+    </ol>
+    <p>やってみて止まったところは、そのままにしておいてください。5回目に一緒に続きをやりましょう。</p>
+  </div>
+
+  <h2>頼み方の例</h2>
+  <div class="ask">「/grill-me 前回の聞き取りメモ（brainstorms/2026-11-26-second-brain.md）の続きから聞いてください。終わったら、CLAUDE.mdと生徒さんのノートに足してください。」<span>Codeの画面で、新しい会話で送ります。</span></div>
+  <div class="ask">「これからはClaude Codeで作業します。この会話（プロジェクト）で作った物と、決めたこと・好きな形を、引き継ぎのファイルにまとめてください。ダウンロードが必要な物も教えてください。」<span>Chatの画面の、今まで使っていた会話で送ります。</span></div>
+  <div class="ask">「AI作業場所に入れた引き継ぎのファイルを読んで、CLAUDE.mdと生徒さんのノートに足してください。」<span>Codeの画面で送ります。</span></div>
+
+  <h2>見てみてください</h2>
+  <ul>
+    <li><strong>話すだけで授業の準備（YouTube・日本語）：</strong><a href="https://youtu.be/jQAqEkBnc0w">https://youtu.be/jQAqEkBnc0w</a><br>今日お話しした、Claudeにほかのアプリをつなぐと、話すだけでどこまでできるかの例です。つなぐかどうかは、美穂さんが決めて大丈夫です。</li>
+  </ul>
+
+  <h2>これから</h2>
+  <table>
+    <tr><th>5回目</th><td>90分。日程はメッセージで決めましょう。自分でスキルを作るところと、ゲームをします。</td></tr>
+  </table>
+</main>
+</body>
+</html>
